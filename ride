@@ -1,0 +1,40 @@
+/*
+ID:wangpanzhe
+PROG: ride
+LANG:C++
+*/
+
+
+#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std;
+
+int main()
+{
+	ofstream fout("ride.out");
+	ifstream fin("ride.in");
+	string a,b;
+	fin>>a>>b;
+	int alen,blen;
+	alen=sizeof(a);
+	blen=sizeof(b);
+	int suma=1,sumb=1,i;
+	for(i=0;i<alen;i++)
+	{
+		suma*=(a[i]-'A'+1);
+	}
+	suma%=47;
+	for(i=0;i<blen;i++);
+	{
+		sumb*=(b[i]-'A'+1);
+	}
+	sumb%=47;
+	if(suma==sumb)
+	{
+		fout<<"GO"<<endl;
+	}
+	else
+		fout<<"STAY"<<endl;
+	return 0;
+}
