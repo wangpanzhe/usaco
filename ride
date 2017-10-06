@@ -19,24 +19,24 @@ int main()
 	int alen,blen;
 	alen=sizeof(a);
 	blen=sizeof(b);
-	cout<<alen<<"\n"<<blen;
+	//cout<<alen<<"\n"<<blen;
 	int suma=1,sumb=1,i;
 	for(i=0;i<alen-2;i++)
 	{
 		suma*=(a[i]-'A'+1);
-		cout<<suma<<endl;
+		//cout<<suma<<endl;
 	}
 	suma%=47;
-	cout<<suma<<endl;
+	//cout<<suma<<endl;
 	int j=0;
 	for(j=0;j<blen-2;j++)
 	{
 		sumb*=(b[j]-'A'+1);
-		cout<<blen<<endl;
+		//cout<<blen<<endl;
 	}
 	sumb%=47;
-	cout<<sumb<<endl;
-	cout<<a<<"\n"<<b;
+	//cout<<sumb<<endl;
+	//cout<<a<<"\n"<<b;
 	if(suma==sumb)
 	{
 		fout<<"GO"<<endl;
